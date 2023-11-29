@@ -31,12 +31,13 @@ class MecanumController
 
     public:
         //Initial the PINs
-        MecanumController(int FL_PIN1, int flSpeedPin, int frDirPin, int frSpeedPin,
-                           int rlDirPin, int rlSpeedPin, int rrDirPin, int rrSpeedPin);
+        MecanumController(int FL_PIN1, int FL_PIN2, int FR_PIN1, int FR_PIN2,
+                          int BL_PIN1, int BL_PIN2, int BR_PIN1, int BR_PIN2);
+
         void move_forward(double speed);
+        void move_backward(double speed);
+        void move_right(double speed);
+        void move_left(double speed);
+        void turn(bool direction, double speed); // 0-left, 1-right.
 }
-
-
-
-
 #endif
