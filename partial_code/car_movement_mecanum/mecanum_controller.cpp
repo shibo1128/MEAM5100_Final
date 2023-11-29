@@ -31,6 +31,14 @@ MecanumController::MecanumController(int FLPIN1, int FLPIN2, int FRPIN1, int FRP
 
     //Initialize PIN mode
     pinMode(FL_PIN1,OUTPUT);
+    pinMode(FL_PIN2,OUTPUT);
+    pinMode(FR_PIN1,OUTPUT);
+    pinMode(FR_PIN2,OUTPUT);
+    pinMode(BL_PIN1,OUTPUT);
+    pinMode(BL_PIN2,OUTPUT);
+    pinMode(BR_PIN1,OUTPUT);
+    pinMode(BR_PIN2,OUTPUT);
+
     
 
 }
