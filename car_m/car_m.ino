@@ -1,3 +1,7 @@
+/*Note that ledc channel 0-3 used by the wheels*/
+
+
+
 void setup() {
   // put your setup code here, to run once:
 
