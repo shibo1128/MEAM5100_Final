@@ -10,5 +10,6 @@ void setup(){
 
 void loop(){
     getDistance1();
-    Serial.print("[ultra]: "); Serial.print(dist_1); Serial.print("cm");
+    printf("1 \n");
+    delay(100); 
 }

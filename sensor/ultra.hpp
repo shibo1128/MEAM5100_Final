@@ -3,10 +3,10 @@
 
 #define TRIG_PIN_1 4
 #define ECHO_PIN_1 5
-#define TRIG_PIN_2 4
-#define ECHO_PIN_2 5
+#define TRIG_PIN_2 6
+#define ECHO_PIN_2 7
 #define LIM_DIST 100 //cm
-#define threshold_to_wall 3
+#define threshold_to_wall 1
 
 volatile float dist_1 = 0.0f;
 volatile float dist_2 = 0.0f;
