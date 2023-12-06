@@ -2,7 +2,28 @@
  * main loop for this project
  * 
 */
-#include "actuators/motor.hpp"
+
+
+#include <WiFi.h>
+
+void setup() {
+  Serial.begin(115200); // Start the Serial communication
+  delay(10);
+
+  // Print the MAC address
+  Serial.print("ESP32 MAC Address: ");
+  Serial.println(WiFi.macAddress());
+}
+
+void loop() {
+  // No need to put anything in the loop for this example
+}
+
+
+
+
+
+/*#include "actuators/motor.hpp"
 
 MecanumController mecanumController(38, 4, 39, 5, 40, 6, 41, 7);
 
@@ -27,3 +48,5 @@ void loop(){
     delay(1000);
     
 }
+
+*/
