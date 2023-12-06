@@ -37,12 +37,12 @@ void getDistance2() {
 
 
 int isClose1() {
-  return (dist_1 < threshold_to_wall) ? 1 : 0;
+  return (dist_1 < threshold_to_wall) ? 0 : 1;
 }
 
 
 int isClose2() {
-  return (dist_2 < threshold_to_wall) ? 1 : 0;
+  return (dist_2 < threshold_to_wall) ? 0 : 1;
 }
 
 

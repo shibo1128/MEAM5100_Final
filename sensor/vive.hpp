@@ -6,6 +6,8 @@
 */
 
 #include "../utils/vive510.h"
+#include "../utils/vive510.cpp"
+#include "../basic/UDP.hpp"
 
 
 #define SIGNALPIN1 1 // pin receiving signal from Vive circuit
@@ -16,12 +18,14 @@ Vive510 vive1(SIGNALPIN1);
 
 void VIVE_INIT(){
     vive1.begin();
+    INIT_UDP();
 }
 
 void Getcoor(){
     if (vive1.status() == VIVE_RECEIVING) {
         xcoor = vive1.xCoord();
         ycoor = vive1.yCoord();
+        UdpSendCoor(xcoor, ycoor);
     }else {
         xcoor=-1;
         xcoor=-1; 

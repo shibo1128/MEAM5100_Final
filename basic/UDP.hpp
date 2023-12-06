@@ -9,9 +9,9 @@
 #include <WiFi.h>
 #include <WiFiUdp.h>
 
-#define teamNumber = 37
+#define teamNumber 37
 #define UDPPORT 2510 // For GTA 2022C game, change to 2023 port
-#define STUDENTIP 123 // choose a teammembers assigned IP numbers
+#define STUDENTIP 137 // choose a teammembers assigned IP numbers
 #define FREQ 1
 
 // change to your own
@@ -52,11 +52,5 @@ void UdpSendCoor(int x, int y)
   UDPTestServer.endPacket();
   Serial.println(udpBuffer);
 }
-
-// receive the car coordinate
-void UdpRevCoor(){
-
-}
-
 
 #endif
