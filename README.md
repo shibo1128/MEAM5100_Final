@@ -7,6 +7,10 @@ There are two parts for final project of MEAM5100, basic tasks and game competit
 | FR wheel direction   | 39    |
 | BL wheel direction   | 40    |
 | BR wheel direction   | 41    |
+| FL wheel direction2  | 11    |
+| FR wheel direction2  | 12    |
+| BL wheel direction2  | 13    |
+| BR wheel direction2  | 14    |
 | FL wheel Speed (PWM) | 4     |
 | FR wheel Speed (PWM) | 5     |
 | BL wheel Speed (PWM) | 6     |
