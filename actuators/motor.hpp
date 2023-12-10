@@ -171,6 +171,8 @@ class MecanumController
         void turn(bool direction, double speed)
         {
             // Convert speed to PWM value (assuming speed is given in percentage)
+            //1- anticlockwise
+            //0-clockwise
             int pwmValue = map(speed, 0, 100, 0, 4095);
             if (direction)
             {    
@@ -189,7 +191,7 @@ class MecanumController
             // Set the direction of all wheels to forward
            
             // Set the speed of all wheels
-
+            
             ledcWrite(FL_CHANNEL, pwmValue);
             ledcWrite(FR_CHANNEL, pwmValue);
             ledcWrite(BL_CHANNEL, pwmValue);
