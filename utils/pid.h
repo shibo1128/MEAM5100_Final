@@ -61,7 +61,7 @@ int pid::POS_PID(float fb, float target1){
     PWM = kp * cur_err + ki * cur_integral + kd * (cur_err - prev_err);
     prev_err = cur_err;
     PWM = (PWM > max_pwm) ? max_pwm:PWM;
-    PWM = (PWM < 0) ? 0:PWM;
+    PWM = (PWM < -max_pwm) ? -max_pwm:PWM;
     return PWM;
 }
 
