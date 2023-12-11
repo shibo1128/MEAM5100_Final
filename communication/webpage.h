@@ -57,6 +57,9 @@ const char body[] PROGMEM = R"===(
                 case 'test':
                     instructionText = 'Instruction: Test mode is activated.';
                     break;
+                case 'push':
+                    instructionText = 'Instruction: Pushing police is activated.';
+                    break;
                 default:
                     instructionText = 'Instruction: Select a mode.';
             }
@@ -72,6 +75,8 @@ const char body[] PROGMEM = R"===(
     <a href="/trophy" class="modeButtonStyle" onclick="showInstruction('findTrophy')">Find Trophy</a><br>
     <a href="/fake" class="modeButtonStyle" onclick="showInstruction('findFake')">Find Fake</a>
     <a href="/test" class="modeButtonStyle" onclick="showInstruction('test')">Test</a>  
+    <br>
+    <a href="/push" class="modeButtonStyle" onclick="showInstruction('push')">Push Police</a>  
 
 </body>
 </html>

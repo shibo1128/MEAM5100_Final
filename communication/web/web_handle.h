@@ -1,8 +1,15 @@
 #include "html510.h"
 #include "webpage.h"
+#include "/Users/wangshibo/Desktop/MEAM5100_Final/sensor/IR.hpp"
+#include "/Users/wangshibo/Desktop/MEAM5100_Final/actuators/motor.hpp"
 
-const char* ssid = "ESP32-Access-Point";
-const char* password = "12345678";
+const char* ssid = "TP-Link_E0C8";
+const char* password = "52665134";
+
+MecanumController mecanumController(38, 4, 11,
+                                    39, 5, 12,
+                                    40, 6, 13,
+                                    41, 7, 14);
 
 HTML510Server h(80);
 
@@ -26,6 +33,11 @@ void handleWallFollowing(){
 void handleTrophyFinding(){
 //  digitalWrite(LEDPIN, LOW);  // LED ON
   printf("finding trophy mode\n");
+  
+  if (senseBeacon() == 550){
+    mecanumController.move_forward(70);
+  }
+  else{mecanumController.turn(1,70);}
   h.sendhtml(body);
 }
 
@@ -41,11 +53,18 @@ void handleTesting(){
   h.sendhtml(body);
 }
 
+void handlePush(){
+//  digitalWrite(LEDPIN, LOW);  // LED ON
+  printf("Push police mode\n");
+  h.sendhtml(body);
+}
+
 void web_server_setup(){  
     h.begin();
     h.attachHandler("/wall",handleWallFollowing);
     h.attachHandler("/trophy",handleTrophyFinding);
     h.attachHandler("/fake",handleFakeFinding);
     h.attachHandler("/test",handleTesting);
+    h.attachHandler("/push",handlePush);
     h.attachHandler("/ ",handleRoot);
 }

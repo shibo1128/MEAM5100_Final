@@ -56,6 +56,9 @@
                 case 'test':
                     instructionText = 'Instruction: Test mode is activated.';
                     break;
+                case 'push':
+                    instructionText = 'Instruction: Pushing police is activated.';
+                    break;
                 default:
                     instructionText = 'Instruction: Select a mode.';
             }
@@ -68,9 +71,12 @@
     <h2>Modes</h2>
     <div id="instruction">Instruction: Select a mode.</div>
     <a href="/wall" class="modeButtonStyle" onclick="showInstruction('wallFollowing')">Wall Following</a>
-    <a href="/trophy" class="modeButtonStyle" onclick="showInstruction('findTrophy')">Find Trophy</a><br>
+    <a href="/trophy" class="modeButtonStyle" onclick="showInstruction('findTrophy')">Find Trophy</a>
+    <br>
     <a href="/fake" class="modeButtonStyle" onclick="showInstruction('findFake')">Find Fake</a>
     <a href="/test" class="modeButtonStyle" onclick="showInstruction('test')">Test</a>  
+    <br>
+    <a href="/push" class="modeButtonStyle" onclick="showInstruction('push')">Test</a>  
 
 </body>
 </html>

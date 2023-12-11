@@ -3,7 +3,6 @@
 
 
 void setup() {
-  
   Serial.begin(115200);
   AP_setup();
   web_server_setup();

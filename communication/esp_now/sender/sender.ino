@@ -1,10 +1,6 @@
 #include "esp_comm.h"
 
-esp_now_peer_info_t peer1 = {
-    .peer_addr = {0x68, 0x67, 0x25, 0x82, 0x41, 0xF4}, // receiver MAC address: 68:67:25:82:41:F4
-    .channel = 1,
-    .encrypt = false,
-};
+
 
 
 

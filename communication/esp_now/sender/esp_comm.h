@@ -14,7 +14,7 @@ void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status)
 }
 
 void setup_esp_now(){
-    WiFi.mode(WIFI_STA);
+    WiFi.mode(WIFI_AP_STA);
     Serial.print("STA MAC: "); 
     Serial.println(WiFi.macAddress()); 
 
